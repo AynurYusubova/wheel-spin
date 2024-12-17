@@ -1,0 +1,133 @@
+$color_1: #fff;
+$color_2: #a2a2a2;
+$font-family_1: sans-serif;
+$background-color_1: #34495e;
+$background-color_2: #ccc;
+$background-color_3: #3f51b5;
+$background-color_4: #ff9800;
+$background-color_5: #e91e63;
+$background-color_6: #4caf50;
+$background-color_7: #009688;
+$background-color_8: #795548;
+$background-color_9: #9c27b0;
+$background-color_10: #f44336;
+$background-color_11: #e2e2e2;
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: $background-color_1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.container {
+	width: 500px;
+	height: 500px;
+	background-color: $background-color_2;
+	border-radius: 50%;
+	border: 15px solid #dde;
+	position: relative;
+	overflow: hidden;
+	transition: 5s;
+
+	div {
+		height: 50%;
+		width: 200px;
+		position: absolute;
+		clip-path: polygon(100% 0, 50% 100%, 0 0);
+		transform: translateX(-50%);
+		transform-origin: bottom;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 20px;
+		font-weight: bold;
+		font-family: $font-family_1;
+		color: $color_1;
+		left: 135px;
+		cursor: pointer;
+	}
+
+	.one {
+		background-color: $background-color_3;
+		left: 50%;
+	}
+
+	.two {
+		background-color: $background-color_4;
+		transform: rotate(45deg);
+	}
+
+	.three {
+		background-color: $background-color_5;
+		transform: rotate(90deg);
+	}
+
+	.four {
+		background-color: $background-color_6;
+		transform: rotate(135deg);
+	}
+
+	.five {
+		background-color: $background-color_7;
+		transform: rotate(180deg);
+	}
+
+	.six {
+		background-color: $background-color_8;
+		transform: rotate(225deg);
+	}
+
+	.seven {
+		background-color: $background-color_9;
+		transform: rotate(270deg);
+	}
+
+	.eight {
+		background-color: $background-color_10;
+		transform: rotate(315deg);
+	}
+
+	p {
+		display: none;
+	}
+}
+
+.arrow {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	color: $color_1;
+
+	&::before {
+		content: "\1F817";
+		font-size: 50px;
+	}
+}
+
+#spin {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	background-color: $background-color_11;
+	text-transform: uppercase;
+	border: 8px solid #fff;
+	font-weight: bold;
+	font-size: 20px;
+	color: $color_2;
+	width: 80px;
+	height: 80px;
+	font-family: $font-family_1;
+	border-radius: 50%;
+	cursor: pointer;
+	outline: none;
+	letter-spacing: 1px;
+}
